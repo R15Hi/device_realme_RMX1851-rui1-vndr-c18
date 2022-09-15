@@ -16,17 +16,18 @@
 
 # Specify arch for gapps
 TARGET_GAPPS_ARCH=arm64
+USE_GAPPS=true
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common LOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 
 $(call inherit-product, device/realme/RMX1851/device.mk)
 
-PRODUCT_NAME := aosp_RMX1851
+PRODUCT_NAME := nad_RMX1851
 PRODUCT_DEVICE := RMX1851
 PRODUCT_MANUFACTURER := Realme
 PRODUCT_BRAND := realme
@@ -34,6 +35,8 @@ PRODUCT_MODEL := Realme 3 Pro
 
 #Oneplus apps
 OOS_APPS=true
+TARGET_BOOT_ANIMATION_RES := 1080
+USE_PIXEL_CHARGING := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
