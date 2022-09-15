@@ -32,6 +32,9 @@ PRODUCT_MANUFACTURER := Realme
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme 3 Pro
 
+#Oneplus apps
+OOS_APPS=true
+
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
